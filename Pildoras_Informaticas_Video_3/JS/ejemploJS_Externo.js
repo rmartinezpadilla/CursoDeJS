@@ -1,0 +1,1 @@
+alert("mensaje de bienvenida, archivo externo");

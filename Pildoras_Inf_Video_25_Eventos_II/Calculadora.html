@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <script>
+        var cifra="";
+        var contador=0;
+        function numeros_to_display(numero) {
+            document.getElementById("display").value=cifra+numero;
+            cifra = document.getElementById("display").value;
+        }
+
+        function suma() {
+
+            contador=contador+ parseInt(cifra);
+
+            document.getElementById("display").value=contador;
+
+            cifra="";
+            
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h1>calculadora video 25 y 26</h1>
+    </div>
+    <div align="center">
+    <table  border="1">
+        <tr>
+            <td colspan="4" align="center">
+                <input type="text" name="display" id="display" size="25">
+            </td>
+        </tr>
+        <tr align="center">
+            <td width="26%"> <input type="button" value="+" name="button1" id="button1" onclick="suma()"></td>
+            <td width="26%"> <input type="button" value="-" name="button2" id="button2"></td>
+            <td width="26%"> <input type="button" value="*" name="button3" id="button3"></td>
+            <td width="26%"> <input type="button" value="/" name="button4" id="button4"></td>
+        </tr>
+        <tr align="center">
+            <td width="26%"> <input type="button" value="7" name="num7" id="num7" onclick="numeros_to_display(7)"></td>
+            <td width="26%"> <input type="button" value="8" name="num8" id="num8" onclick="numeros_to_display(8)"></td>
+            <td width="26%"> <input type="button" value="9" name="num9" id="num9" onclick="numeros_to_display(9)"></td>           
+        </tr>
+        <tr align="center">
+            <td width="26%"> <input type="button" value="4" name="num4" id="num4" onclick="numeros_to_display(4)"></td>
+            <td width="26%"> <input type="button" value="5" name="num5" id="num5" onclick="numeros_to_display(5)"></td>
+            <td width="26%"> <input type="button" value="6" name="num6" id="num6" onclick="numeros_to_display(6)"></td>           
+        </tr>
+        <tr align="center">
+            <td width="26%"> <input type="button" value="1" name="num1" id="num1" onclick="numeros_to_display(1)"></td>
+            <td width="26%"> <input type="button" value="2" name="num2" id="num2" onclick="numeros_to_display(2)"></td>
+            <td width="26%"> <input type="button" value="3" name="num3" id="num3" onclick="numeros_to_display(3)"></td>           
+        </tr>
+        <tr align="center">
+            <td width="26%"> <input type="button" value="0"name="num0" id="num0" onclick="numeros_to_display(0)"></td>
+            <td width="26%"> <input type="button" value="." name="button15"></td>
+            <td width="26%"> <input type="button" value="*" name="button16"></td>           
+        </tr>
+        
+    </table>
+</div>
+</body>
+</html>

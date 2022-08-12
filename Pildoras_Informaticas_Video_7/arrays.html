@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Usando Arrays</title>
+<link rel="stylesheet" href="css/micss.css">
+<script>
+
+/*
+primera forma de declarar un array
+*/
+  var array_articulos=["zapatillas", "Camisetas", "pantalon", "medias"];
+
+  /*
+segunda forma de declarar un array
+*/
+	
+  /* var array_articulos = new Array["zapatillas", "Camisetas", "pantalon", "medias"]
+
+    /*
+Array Vacío
+
+*/
+
+/* var array_articulos = [];*/
+
+</script>
+</head>
+
+<body>
+<div class="contenedor">
+  <div class="header">
+    <p class="logo">JavaScript Arrays <i class="mm">Píldoras Informáticas
+     </p>
+  </div>
+  <div class="contenido">
+    <div class="principal">
+      <h1>Manejando Arrays</h1>
+      <script>
+        alert("existen " + array_articulos.length + " Articulos en el arreglo.") ;
+	  document.write("<p>"+ "El primer articulo es <strong>" + array_articulos[0] + "</strong></p>");
+
+    document.write("<p>"+ "El primer último elemento es <strong>" + array_articulos[array_articulos.length-1] + "</strong></p>");
+
+    document.write("<p>Agregamos un nuevo elemento : </p>");
+
+    array_articulos.unshift("Cadenas");
+
+    document.write("<p>"+ "El primer articulo es <strong>" + array_articulos[0] + "</strong></p>");
+
+    document.write("<p>Agregamos un nuevo elemento al final : </p>");
+    
+    array_articulos.push("Raquetas");
+
+    document.write("<p>"+ "El  último elemento es <strong>" + array_articulos[array_articulos.length-1] + "</strong></p>");
+
+    /* vamos a agregar un nuevo elemento por el teclado*/
+
+		array_articulos.push(prompt("Digita el nuevo elemento por favor"));
+		
+    document.write("<p>"+ "El primer último elemento es <strong>" + array_articulos[array_articulos.length-1] + "</strong></p>");
+		
+		
+    document.write("<p>El arreglo tiene : " + array_articulos.length + " Elementos.</p>");
+
+    /*
+    eliminar un elemento
+    */
+
+    alert("se borrará el primer elemento...")
+
+    array_articulos.shift();
+    document.write("<p>"+ "El primer articulo es <strong>" + array_articulos[0] + "</strong></p>");
+    
+    document.write("<p>El arreglo tiene : " + array_articulos.length + " Elementos.</p>");
+
+    alert("se borrará el último elemento...");
+
+
+    array_articulos.pop();
+
+    document.write("<p>"+ "El  último elemento es <strong>" + array_articulos[array_articulos.length-1] + "</strong></p>");
+    document.write("<p>El arreglo tiene : " + array_articulos.length + " Elementos.</p>");
+	  </script>
+     </div>
+  </div>
+  
+</div>
+</body>
+</html>

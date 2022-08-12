@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número aleatorio</title>
+
+    <script>
+        var aleatorio =Math.round(Math.random())*100;
+
+        var miNum=0;
+        var intentos=0;
+
+       
+    </script>
+</head>
+<body>
+
+        <script>
+            
+            do {
+            miNum=prompt("Digita el numero entre 0 y 100, por favor");
+            if (aleatorio>miNum) {
+                alert("El número es mas alto");
+            }
+            
+            if(aleatorio<miNum){
+                alert("El número es mas Bajo");
+            }
+            intentos++;
+        } while (aleatorio!=miNum);
+        </script>
+        <p>
+        <script>
+            document.write("el de la suerte " + aleatorio + ", haz completado el nivel en "  + intentos  + " intentos.");
+        </script>
+       </p>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <script>
+        function mensajeAlerta() {
+            alert("diste click a la imagen");
+        }
+
+        function mensajeOver() {
+            alert("pasaste por encima de la imagen");
+        }
+    </script>
+</head>
+<body>
+    <h1>Eventos I</h1>
+    <p>
+    <img src="/Img/details-modal.jpg" alt="" srcset="" width="300" height="250" onclick="mensajeAlerta()">
+</p>
+<p>
+    <img src="/Img/details-modal.jpg" alt="" srcset="" width="300" height="250" onmouseover="mensajeOver()">
+</p>
+</body>
+</html>

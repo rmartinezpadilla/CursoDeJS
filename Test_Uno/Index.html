@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamendos JavaScript</title>
+</head>
+<body>
+    <h1>FUNDAMENTOS JAVASCRIPT</h1>
+    <script>
+        var hola = "Hola Mundo, estoy aprendiendo js";
+        console.log(hola)
+        // usamos la palabra reservada let para declarar variables 
+        // ya que si usamos la palabra var será poder usada de forma global
+        console.log("**************Var**************");
+        var musica="Rock";
+        console.log("Variable musica antes del bloque", musica);
+        {
+            var musica ="Pop";
+            console.log("Variable musica dentro del bloque", musica);
+
+        }
+        console.log("Variable musica despues del bloque", musica);
+
+        console.log("**************Let**************");
+
+
+        //probando la palabra reservada let
+        let musica2="Rock";
+        console.log("Variable musica antes del bloque", musica2);
+        {
+            let musica2 ="Pop";
+            console.log("Variable musica dentro del bloque", musica2);
+
+        }
+        console.log("Variable musica despues del bloque", musica2);
+
+
+        console.log("**************CONSTANTES**************");
+        const PI = 3.1416;
+        console.log(PI);
+
+        console.log("**************OBJETOS**************");
+        let objeto = {
+            nombre: "Rubén",
+            edad: 23
+        }
+        console.log(objeto);
+
+        console.log("*********AGREGAR UNA NUEVA PRPIEDAD AL OBjETO*********");
+        objeto.correo ="rmartinezp@gmail.com";
+        console.log(objeto);
+
+        console.log("**************ARREGLO**************");
+        let colores = ["Verde","Azul", "Negro"];
+        console.log(colores);
+
+        console.log("*******AGREGAR UN NUEVO ELEMENTO ALARREGLO*******");
+        colores.push("Negro bajito")
+        console.log(colores);
+
+    </script>
+</body>
+</html>
