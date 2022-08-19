@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejemplo video 31 - 1</title>
+    <style>
+        #anuncio{
+            background-color: #000;
+            color: #FFF;
+            font-size: 24px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#anuncio").width(500).height(500).text("Hola").hide().fadeIn(3000);
+        });
+    </script>
+</head>
+<body>
+    <div id="anuncio">
+        !Compra!
+    </div>
+    <!--
+    <script>
+        var anuncio = document.getElementById("anuncio");
+
+        anuncio.style.width="500";
+
+        anuncio.style.height="500";
+
+        anuncio.innerHTML="Vende!";
+    </script>-->
+</body>
+</html>
