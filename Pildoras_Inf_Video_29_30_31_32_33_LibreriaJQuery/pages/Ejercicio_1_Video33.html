@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Video 33 - Libería JQuery V</title>
+        
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+        <style>
+            #banner{
+                background-color:#F00;
+                width: 350px;
+                height: 200px;
+                position: absolute;
+                left: 500px;
+                top: 120px;
+                font-size: 36px;
+                text-align: center;
+            }
+
+            #imagen1, #imagen2, #imagen3, #imagen4{
+                float: left;
+                margin: 15px;
+                width: 350px;
+                height: 200px;                            
+                font-size: 36px;
+
+            }
+
+           img{
+                float: left;
+            }
+        </style>
+
+<script>
+        
+    $(document).ready(function(){
+
+        /* ESTO ES UNA FORMA DE HACERLO*/
+        /*
+        var close = document.getElementById("cerrar");
+        close.addEventListener("click", cerrar_banner, false);
+
+        */
+
+        document.getElementById("cerrar").addEventListener("click", cerrar_banner, false);
+       // document.getElementById("imagen1").addEventListener("click", reemplaza, false);
+        
+       // aqui seleccionamos todas las imagenes que se encuentran dentro de ese div carrete
+       // esto lo guardamos dentro de un array
+       var imagenes =  document.querySelectorAll("#carrete img");
+
+       for (let index = 0; index < imagenes.length; index++) {
+           //const element = array[index];
+           imagenes[index].addEventListener("click", reemplaza, false);
+           
+       }
+
+    
+    });
+
+    function cerrar_banner() {
+            //funcion remove()
+            $(document.getElementById("banner")).remove();
+        }
+
+        function reemplaza(num) {
+
+            if (num.target==imagen1) {
+                $("#imagen1").replaceWith("<div id='imagen1'> agregado al carro</div>");
+            } else if (num.target==imagen2) {
+                $("#imagen2").replaceWith("<div id='imagen2'> agregado al carro</div>");
+            } else if (num.target==imagen3) {
+                $("#imagen3").replaceWith("<div id='imagen3'> agregado al carro</div>");
+            } else if (num.target==imagen4) {
+                $("#imagen4").replaceWith("<div id='imagen4'> agregado al carro</div>");
+            }
+           
+        }
+</script>
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar-->
+            <div class="border-end bg-white" id="sidebar-wrapper">
+                <div class="sidebar-heading border-bottom bg-light">Curso JavaScript</div>
+                <div class="list-group list-group-flush">
+                    
+                </div>
+            </div>
+            <!-- Page content wrapper-->
+            <div id="page-content-wrapper">
+                <!-- Top navigation-->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                    <div class="container-fluid">
+                      <!--  <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>-->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                                <li class="nav-item active"><a class="nav-link" href="#!">inicio</a></li>
+                               <!--<ng-container ></ng-container> <li class="nav-item"><a class="nav-link" href="#!">Link</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#!">Action</a>
+                                        <a class="dropdown-item" href="#!">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#!">Something else here</a>
+                                    </div>
+                                </li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- Page content-->
+                <div class="container-fluid">
+                    
+                        <h3 class="mt-4">Video 33 & 34  - Libería JQuery V</h3>
+                        <p><strong>Reemplazar y eliminar elementos usando JQuery</strong></p>
+
+                        <div id="banner">
+                            Banner de prueba
+                            <p id="cerrar">
+                                Cerrar
+                            </p>
+                        </div>
+                    
+                        <div id="carrete">
+                            <img src="/images/1.jpg"  width="250" height="175" alt="" id="imagen1">
+                            
+                            <img src="/images/2.jpg"  width="250" height="175" alt="" id="imagen2">
+                            
+                            <img src="/images/3.webp"  width="250" height="175" alt="" id="imagen3">
+                            
+                            <img src="/images/4.jpg"  width="250" height="175" alt="" id="imagen4">
+                        </div>
+                        <div>
+                            <br>
+                            <p>
+
+                            </p>
+                        <a href="../LibreriaJQuery_V_Video33.html">Volver</a>                    
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!--
+        <script>
+            /*identificar elementos de la pagina en este caso de un div (contenedor)*/            
+            var imagenes = document.querySelectorAll("#carrete img");
+                for (var index = 0; index < imagenes.length; index++) {
+                    //const element = array[index];
+                    imagenes[index].style.visibility="hidden";                    
+                }            
+
+        </script>-->
+
+    </body>
+</html>

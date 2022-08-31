@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 video 39</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+
+    <script>
+
+        //vamos  a sustituir una imagen
+        //PONEMOS EL ELEMENTO A LA ESCUCHA CON EL evento
+
+        $(document).ready(function(){
+
+            document.getElementById("img1").addEventListener("mouseover", cambiarImg1, false);
+            document.getElementById("img1").addEventListener("mouseout", restaurarImg1, false);
+
+            document.getElementById("img2").addEventListener("click", cambiarImg2, false);
+            document.getElementById("img2").addEventListener("mouseout", restaurarImg2, false);
+
+        });
+        
+
+        function cambiarImg1() {
+
+            $(document.getElementById("img1")).attr("src", "/images/photo.jpg");
+            
+        }
+
+        function restaurarImg1() {
+            $(document.getElementById("img1")).attr("src", "/images/1.jpg")
+        }
+
+        function cambiarImg2() {
+
+            $(document.getElementById("img2")).attr("src", "/images/photo.jpg");
+
+            }
+
+            function restaurarImg2() {
+            $(document.getElementById("img2")).attr("src", "/images/1.jpg")
+            }
+
+
+
+    </script>
+</head>
+<body>
+    <h3>VAMOS A CAMBIAR LA PROPIEDAD SRC DE LA IMAGEN USANDO JQUERY PASANDO EL PUNTERO</h3>
+    <img src="/images/1.jpg" width="250" height="250" alt="" id="img1">
+    
+
+    <h3>VAMOS A CAMBIAR LA PROPIEDAD SRC DE LA IMAGEN USANDO JQUERY HACIENDO CLIC EN LA IMAGEN</h3>
+    <img src="/images/2.jpg" width="250" height="250" alt="" id="img2">
+
+    <a href="../Leyendo&CambiandoHTMLI.html">Inicio Video 39</a>
+    <a href="/ejercicios/ejercicio2Video39.html">Ejercicio 2</a>
+    <a href="/ejercicios/ejercicio3Video39.html">Ejercicio 3</a>
+
+</body>
+</html>

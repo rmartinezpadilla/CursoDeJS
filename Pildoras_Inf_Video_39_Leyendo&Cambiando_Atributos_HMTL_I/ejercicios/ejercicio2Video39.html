@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 video 39</title>
+    <style>
+
+        table{
+
+            text-align: center;
+            width: 50%;
+            border: none;
+            margin-top: auto;
+        }
+        img{
+            padding: 0 5px;
+            width: 250px;
+            height: 250px;
+            /*filter: blur(6px);*/
+        }
+
+        h1{
+            text-align: center;
+        }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+            var imagenes = document.querySelectorAll("img");
+
+            for (let index = 0; index < imagenes.length; index++) {
+                imagenes[index].addEventListener("mouseover", cambiar, false);
+                imagenes[index].addEventListener("mouseout", restaurar, false);
+                
+            }
+
+        });
+
+
+        function cambiar(e) {
+
+            //$("img1".removeAttribute('filter'));
+
+            if (e.target == img1) {
+                $("#img1").attr("src", "../images/photo.jpg");
+            
+            }else  if (e.target == img2) {
+                $("#img2").attr("src", "../images/photo.jpg");
+            
+            }else  if (e.target == img3) {
+                $("#img3").attr("src", "../images/photo.jpg");
+            
+            }
+            else if (e.target == img4) {
+                $("#img4").attr("src", "../images/photo.jpg");
+            
+            }
+
+
+           
+            
+        }
+
+        function restaurar(e) {
+
+//$("img1".removeAttribute('filter'));
+
+if (e.target == img1) {
+    $("#img1").attr("src", "../images/1.jpg");
+
+}else  if (e.target == img2) {
+    $("#img2").attr("src", "../images/2.jpg");
+
+}else  if (e.target == img3) {
+    $("#img3").attr("src", "../images/3.webp");
+
+}
+else if (e.target == img4) {
+    $("#img4").attr("src", "../images/4.jpg");
+
+}
+
+
+
+
+}
+      
+
+
+
+    </script>
+</head>
+<body>
+    <h1>GALERIA DE IMAGENES - VIDEO 39 EJERCICIO 2</h1>
+    <table>
+        <tr>
+            <td><img src="/images/1.jpg" alt="" id="img1"></td>
+            <td><img src="/images/2.jpg" alt="" id="img2"></td>
+            <td><img src="/images/3.webp" alt="" id="img3"></td>
+            <td><img src="/images/4.jpg" alt="" id="img4"></td>
+        </tr>
+    </table>
+  
+    <a href="../Leyendo&CambiandoHTMLI.html">Inicio Video 39</a>
+    <a href="/ejercicios/ejercicio1Video39.html">Ejercicio 1</a>
+    <a href="/ejercicios/ejercicio3Video39.html">Ejercicio 3</a>
+
+</body>
+</html>

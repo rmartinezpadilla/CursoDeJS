@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Ejercicio 3 video 39</title>
+    <style>
+
+       .destacar{
+           background-color: #f00;
+           color: white;
+       }
+        img{
+            padding: 0 5px;
+            width: 250px;
+            height: 250px;
+            /*filter: blur(6px);*/
+        }
+
+        h1{
+            text-align: center;
+        }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+
+    <script>
+
+       $(document).ready(function(){
+
+        var mi_lista = document.querySelectorAll("li");
+
+        for (let index = 0; index < mi_lista.length; index++) {
+            mi_lista[index].addEventListener("mouseover", mostrarImagen, false);
+            mi_lista[index].addEventListener("mouseout", ocultarImagen, false);
+            
+        }
+       });
+
+       function mostrarImagen(e) {
+
+        if (e.target==elemento1) {
+
+            $("#elemento1").addClass("destacar");
+            $("img").attr("src", "../images/1.jpg");
+            
+        }else  if (e.target==elemento2) {
+
+            $("#elemento2").addClass("destacar");
+            $("img").attr("src", "../images/2.jpg");
+
+            }else  if (e.target==elemento3) {
+
+            $("#elemento3").addClass("destacar");
+            $("img").attr("src", "../images/3.webp");
+
+            }else  if (e.target==elemento4) {
+
+            $("#elemento4").addClass("destacar");
+            $("img").attr("src", "../images/4.jpg");
+
+            }
+
+        }
+
+        function ocultarImagen(e) {
+            if (e.target==elemento1) {
+
+            $("#elemento1").removeClass("destacar");
+            //$("img").attr("src", "../images/photo.jpg");
+            $("#imagenesOriginal").attr("src", "../images/photo.jpg");
+
+            }else  if (e.target==elemento2) {
+
+            $("#elemento2").removeClass("destacar");
+            //$("img").removeClass("src");
+            $("img").attr("src", "../images/photo.jpg");
+
+            }else  if (e.target==elemento3) {
+
+            $("#elemento3").removeClass("destacar");
+            //$("img").removeClass("src");
+            $("img").attr("src", "../images/photo.jpg");
+
+            }else  if (e.target==elemento4) {
+
+            $("#elemento4").removeClass("destacar");
+           // $("img").removeClass("src");
+           $("img").attr("src", "../images/photo.jpg");
+
+            }
+            
+        }
+
+    </script>
+</head>
+<body>
+    <h1>LISTA DE IMAGENES - VIDEO 39 EJERCICIO 3</h1>
+    <div class="container" >
+        <div class="row">
+
+        <div id="contenedor1">      
+            <ul class="list-group">
+                <li class="list-group-item" id="elemento1">imagen 1</li>
+                <li class="list-group-item" id="elemento2">imagen 2</li>
+                <li class="list-group-item" id="elemento3">imagen 3</li>
+                <li class="list-group-item" id="elemento4">imagen 4</li>
+                
+            </ul>
+        </div>
+
+            <div id="contenedor2">      
+                <img src="../images/photo.jpg" alt="" srcset="" id="imagenesOriginal">
+            </div>
+
+  
+    <a href="../Leyendo&CambiandoHTMLI.html">Inicio Video 39</a>
+    <a href="/ejercicios/ejercicio1Video39.html">Ejercicio 1</a>
+    <a href="/ejercicios/ejercicio2Video39.html">Ejercicio 2</a>
+</div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>
